@@ -1,7 +1,5 @@
-let g:rapidfire_commands = {}
-
 function! rapidfire#command#rapidfire#call(mods, fargs) abort
-  let command = get(g:rapidfire_commands, a:fargs, '')
+  let command = rapidfire#store#get(a:fargs)
 
   call inputsave()
   try
@@ -14,6 +12,6 @@ function! rapidfire#command#rapidfire#call(mods, fargs) abort
     return
   endif
 
-  let g:rapidfire_commands[a:fargs] = command
+  call rapidfire#store#set(a:fargs, command)
   execute command
 endfunction
