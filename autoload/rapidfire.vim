@@ -1,4 +1,4 @@
-function! rapidfire#command#rapidfire#call(mods, fargs) abort
+function! rapidfire#call(mods, fargs) abort
   let command = rapidfire#store#get(a:fargs)
 
   call inputsave()
