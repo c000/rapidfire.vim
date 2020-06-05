@@ -13,5 +13,5 @@ function! rapidfire#call(mods, name) abort
   endif
 
   call rapidfire#store#set(a:name, expr)
-  execute expr
+  execute a:mods expr
 endfunction
