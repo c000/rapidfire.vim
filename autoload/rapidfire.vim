@@ -1,5 +1,5 @@
 function! rapidfire#call(mods, name) abort
-  let expr = rapidfire#store#get(a:name)
+  let expr = get(g:rapidfire#commands, a:name, '')
 
   call inputsave()
   try
@@ -13,6 +13,8 @@ function! rapidfire#call(mods, name) abort
     return
   endif
 
-  call rapidfire#store#set(a:name, expr)
+  let g:rapidfire#commands[a:name] = expr
   execute a:mods expr
 endfunction
+
+let g:rapidfire#commands = get(g:, 'rapidfire#commands', {})
