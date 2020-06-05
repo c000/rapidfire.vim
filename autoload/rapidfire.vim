@@ -1,17 +1,17 @@
-function! rapidfire#call(mods, fargs) abort
-  let command = rapidfire#store#get(a:fargs)
+function! rapidfire#call(mods, name) abort
+  let expr = rapidfire#store#get(a:name)
 
   call inputsave()
   try
-    let command = input(printf('Rapidfire[%s]: ', a:fargs), l:command, 'command')
+    let expr = input(printf('Rapidfire[%s]: ', a:name), expr, 'command')
   finally
     call inputrestore()
   endtry
 
-  if empty(command)
+  if empty(expr)
     return
   endif
 
-  call rapidfire#store#set(a:fargs, command)
-  execute command
+  call rapidfire#store#set(a:name, expr)
+  execute expr
 endfunction
