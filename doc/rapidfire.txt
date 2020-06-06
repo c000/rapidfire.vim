@@ -1,0 +1,66 @@
+*rapidfire.txt*				Rapid editable EX command launcher
+
+Author: c000 <c255xff at gmail.com>
+License: MIT license
+
+==============================================================================
+CONTENTS					*rapidfire-contents*
+
+Usage					|rapidfire-usage|
+  Commands				|rapidfire-commands|
+Custom					|rapidfire-custom|
+  Mapping				|rapidfire-mapping|
+  Variables				|rapidfire-variables|
+  Examples				|rapidfire-examples|
+
+
+==============================================================================
+USAGE						*rapidfire-usage*
+
+------------------------------------------------------------------------------
+COMMANDS					*rapidfire-commands*
+
+						*:Rapidfire*
+:Rapidfire {cachestr}
+	Call a rapidfire command using cache {cachestr}.
+
+
+==============================================================================
+CUSTOM						*rapidfire-custom*
+
+------------------------------------------------------------------------------
+MAPPING						*rapidfire-mapping*
+
+Repidfire provide no default mappings.
+You can map any (unused) keys to rapidfire.
+
+Example: >
+	nnoremap <F1> :<C-u>Rapidfire F1<CR>
+
+------------------------------------------------------------------------------
+VARIABLES					*rapidfire-variables*
+
+*g:rapidfire#commands*
+	If you need default commands, you can set them by a global variable.
+	Example: >
+		let g:rapidfire#commands = {'F5': 'make'}
+
+------------------------------------------------------------------------------
+EXAMPLES					*rapidfire-examples*
+
+Map all function keys to rapidfire >
+
+	nnoremap <F1> :<C-u>Rapidfire F1<CR>
+	nnoremap <F2> :<C-u>Rapidfire F2<CR>
+	nnoremap <F3> :<C-u>Rapidfire F3<CR>
+	nnoremap <F4> :<C-u>Rapidfire F4<CR>
+	nnoremap <F5> :<C-u>Rapidfire F5<CR>
+	nnoremap <F6> :<C-u>Rapidfire F6<CR>
+	nnoremap <F7> :<C-u>Rapidfire F7<CR>
+	nnoremap <F8> :<C-u>Rapidfire F8<CR>
+	nnoremap <F9> :<C-u>Rapidfire F9<CR>
+	nnoremap <F10> :<C-u>Rapidfire F10<CR>
+	nnoremap <F11> :<C-u>Rapidfire F11<CR>
+	nnoremap <F12> :<C-u>Rapidfire F12<CR>
+
+vim:tw=78:ts=8:noet:ft=help:norl
