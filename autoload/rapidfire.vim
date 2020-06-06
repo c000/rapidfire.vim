@@ -14,6 +14,10 @@ function! rapidfire#call(mods, name) abort
   endif
 
   let g:rapidfire#commands[a:name] = expr
+  if !empty(g:rapidfire#persistent_filename)
+    call rapidfire#persistent#save(g:rapidfire#persistent_filename)
+  endif
+
   doautocmd <nomodeline> User RapidfirePre
   execute a:mods expr
   doautocmd <nomodeline> User RapidfirePost
@@ -27,3 +31,4 @@ endfunction
 
 " Configurations
 let g:rapidfire#commands = get(g:, 'rapidfire#commands', {})
+let g:rapidfire#persistent_filename = get(g:, 'rapidfire#persistent_filename', '')
