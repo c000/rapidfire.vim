@@ -8,6 +8,5 @@ endfunction
 function! rapidfire#persistent#save(filename) abort
   let filename = fnamemodify(expand(a:filename), ':p')
   call mkdir(fnamemodify(filename, ':h'), 'p', 0700)
-  echo json_encode(g:rapidfire#commands)
   call writefile([json_encode(g:rapidfire#commands)], filename)
 endfunction
