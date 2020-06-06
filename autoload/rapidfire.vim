@@ -3,7 +3,7 @@ function! rapidfire#call(mods, name) abort
 
   call inputsave()
   try
-    let expr = input(printf('Rapidfire[%s]: ', a:name), expr, 'command')
+    let expr = input(printf('Rapidfire[%s]:', a:name), expr, 'command')
     echo '' | redraw
   finally
     call inputrestore()
