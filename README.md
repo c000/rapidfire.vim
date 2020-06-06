@@ -31,7 +31,7 @@ For example, maps `<F1>` key to `Rapidfire` by:
 nnoremap <F1> :<C-u>Rapidfire CACHESTR<CR>
 ```
 
-If you same cache space, you can use same cache strings.
+If you want same cache space, you can use same cache strings.
 For example: map `<F2>` key to `Rapidfire` and share `<F1>` and `<F2>` rapidfire cache by:
 ```.vim
 nnoremap <F2> :<C-u>Rapidfire CACHESTR<CR>
