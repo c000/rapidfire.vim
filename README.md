@@ -1,7 +1,7 @@
 # Rapidfire.vim
 Rapid editable EX command launcher.
 
-![rapidfire](https://user-images.githubusercontent.com/888388/83951204-cb5b9d00-a86a-11ea-97e3-4479278edddd.gif)
+![rapidfire](https://user-images.githubusercontent.com/888388/83955344-e5a67280-a88c-11ea-8b0b-b62f10f73806.gif)
 
 ## Usage
 
