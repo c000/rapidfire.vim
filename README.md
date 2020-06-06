@@ -12,7 +12,7 @@ Launch rapidfire by:
 Then you can see rapidfire prompt, and you can input and execute ex command same as you type `:`.
 For example:
 ```.vim
-Rapidfire[CACHESTR]:make
+Rapidfire[CACHESTR] :make
 ```
 That means same as `:make`.
 
