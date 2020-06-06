@@ -38,7 +38,7 @@ nnoremap <F2> :<C-u>Rapidfire CACHESTR<CR>
 ```
 
 #### Example mappings
-Map all functions keys to rapidfire:
+Map all function keys to rapidfire:
 ```.vim
 nnoremap <F1> :<C-u>Rapidfire F1<CR>
 nnoremap <F2> :<C-u>Rapidfire F2<CR>
