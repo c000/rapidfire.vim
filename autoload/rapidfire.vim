@@ -19,12 +19,11 @@ function! rapidfire#call(mods, name) abort
   doautocmd <nomodeline> User RapidfirePost
 endfunction
 
-" Register null autocmd to prevent 'No autocmd found' error
-augroup rapidfire_internal
-  autocmd! *
-  autocmd User RapidfirePre :
-  autocmd User RapidfirePost :
-augroup END
+function! rapidfire#load_persistent_file() abort
+  if !empty(g:rapidfire#persistent_filename)
+    call rapidfire#persistent#load(g:rapidfire#persistent_filename)
+  endif
+endfunction
 
 " Configurations
 let g:rapidfire#commands = get(g:, 'rapidfire#commands', {})
