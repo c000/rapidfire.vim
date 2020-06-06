@@ -1,6 +1,8 @@
 # Rapidfire.vim
 Rapid editable ex command launcher.
 
+![rapidfire](https://user-images.githubusercontent.com/888388/83951204-cb5b9d00-a86a-11ea-97e3-4479278edddd.gif)
+
 ## Usage
 
 ### Example mappings
