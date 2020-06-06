@@ -34,4 +34,4 @@ let g:rapidfire#commands = get(g:, 'rapidfire#commands', {})
 let g:rapidfire#persistent_filename = get(g:, 'rapidfire#persistent_filename', '')
 
 " Unstable configurations
-let g:rapidfire#prompt_format = 'Rapidfile[%s] :'
+let g:rapidfire#prompt_format = 'Rapidfire[%s] :'
