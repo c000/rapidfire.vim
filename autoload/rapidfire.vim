@@ -3,7 +3,7 @@ function! rapidfire#call(mods, name) abort
 
   call inputsave()
   try
-    let expr = input(printf('Rapidfire[%s]:', a:name), expr, 'command')
+    let expr = input(printf(g:rapidfire#prompt_format, a:name), expr, 'command')
     echo '' | redraw
   finally
     call inputrestore()
@@ -32,3 +32,6 @@ endfunction
 " Configurations
 let g:rapidfire#commands = get(g:, 'rapidfire#commands', {})
 let g:rapidfire#persistent_filename = get(g:, 'rapidfire#persistent_filename', '')
+
+" Unstable configurations
+let g:rapidfire#prompt_format = 'Rapidfile[%s] :'
