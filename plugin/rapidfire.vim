@@ -3,6 +3,4 @@ if exists('g:rapidfire_loaded')
 endif
 let g:rapidfire_loaded = 1
 
-command! -nargs=1
-      \ Rapidfire
-      \ call rapidfire#command#rapidfire#call(<q-mods>, <f-args>)
+command! -nargs=1 Rapidfire call rapidfire#call(<q-mods>, <f-args>)
