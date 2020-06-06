@@ -53,3 +53,9 @@ nnoremap <F10> :<C-u>Rapidfire F10<CR>
 nnoremap <F11> :<C-u>Rapidfire F11<CR>
 nnoremap <F12> :<C-u>Rapidfire F12<CR>
 ```
+
+### Default values
+Configure rapidfire default values by:
+```.vim
+let g:rapidfire#commands = {'F5': 'make'}
+```
