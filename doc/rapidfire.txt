@@ -45,10 +45,17 @@ VARIABLES					*rapidfire-variables*
 	Example: >
 		let g:rapidfire#commands = {'F5': 'make'}
 
+*g:rapidfire#persistent_filename*
+	Save rapidfire cache to the file.
+
+	WARNING: rapidfire is currently not support for both
+	|g:rapidfire#commands| and |g:rapidfire#persistent_filename|
+	configured.
+
 ------------------------------------------------------------------------------
 EXAMPLES					*rapidfire-examples*
 
-Map all function keys to rapidfire >
+Map all function keys to rapidfire with persistent >
 
 	nnoremap <F1> :<C-u>Rapidfire F1<CR>
 	nnoremap <F2> :<C-u>Rapidfire F2<CR>
@@ -62,5 +69,6 @@ Map all function keys to rapidfire >
 	nnoremap <F10> :<C-u>Rapidfire F10<CR>
 	nnoremap <F11> :<C-u>Rapidfire F11<CR>
 	nnoremap <F12> :<C-u>Rapidfire F12<CR>
+	let g:rapidfire#persistent_filename = '~/.cache/rapidfire/commands.json'
 
 vim:tw=78:ts=8:noet:ft=help:norl
