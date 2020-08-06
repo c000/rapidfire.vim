@@ -24,6 +24,11 @@ COMMANDS					*rapidfire-commands*
 :Rapidfire {cachestr}
 	Call a rapidfire command using cache {cachestr}.
 
+						*:RapidfireImmediate*
+:RapidfireImmediate {cachestr}
+	Call a rapidfire command immediately using cache {cachestr}.
+	It fallbacks to |:Rapidfire| if no command found for the {cachstr}.
+
 
 ==============================================================================
 CUSTOM						*rapidfire-custom*

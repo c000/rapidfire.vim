@@ -1,21 +1,25 @@
-function! rapidfire#call(mods, name) abort
+function! rapidfire#call(mods, name, ...) abort
+  let options = extend({
+        \ 'immediate': 0,
+        \}, a:0 ? a:1 : {},
+        \)
   let expr = get(g:rapidfire#commands, a:name, '')
 
-  call inputsave()
-  try
-    let expr = input(printf(g:rapidfire#prompt_format, a:name), expr, 'command')
-    echo '' | redraw
-  finally
-    call inputrestore()
-  endtry
-
-  if empty(expr)
-    return
-  endif
-
-  let g:rapidfire#commands[a:name] = expr
-  if !empty(g:rapidfire#persistent_filename)
-    call rapidfire#persistent#save(g:rapidfire#persistent_filename)
+  if !options.immediate || empty(expr)
+    call inputsave()
+    try
+      let expr = input(printf(g:rapidfire#prompt_format, a:name), expr, 'command')
+      echo '' | redraw
+    finally
+      call inputrestore()
+    endtry
+    if empty(expr)
+      return expr
+    endif
+    let g:rapidfire#commands[a:name] = expr
+    if !empty(g:rapidfire#persistent_filename)
+      call rapidfire#persistent#save(g:rapidfire#persistent_filename)
+    endif
   endif
 
   doautocmd <nomodeline> User RapidfirePre
