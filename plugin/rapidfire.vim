@@ -11,3 +11,4 @@ augroup rapidfire_internal
 augroup END
 
 command! -nargs=1 Rapidfire call rapidfire#call(<q-mods>, <f-args>)
+command! -nargs=1 RapidfireImmediate call rapidfire#call(<q-mods>, <f-args>, { 'immediate': 1 })
